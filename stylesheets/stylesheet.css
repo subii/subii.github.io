@@ -32,6 +32,7 @@ body {
 
 article,
 aside,
+footer,
 details,
 figcaption,
 figure,
@@ -766,6 +767,9 @@ footer a:hover {
   content: '.';
 }
 
+.copyright {
+    margin-top: 250px;
+}
 .clearfix {display: inline-block;}
 * html .clearfix {height: 1%;}
 .clearfix {display: block;}
@@ -861,6 +865,7 @@ footer a:hover {
   aside#sidebar a.button {
     display: none;
   }
+
   #main-content h1:before,
   #main-content h2:before,
   #main-content h3:before,
@@ -878,4 +883,3 @@ footer a:hover {
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) { }
-
