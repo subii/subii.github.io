@@ -114,3 +114,12 @@
   color: #1d3e81;
 }
 
+#name {
+   display: block;
+   overflow: hidden;
+   width: 100%;
+   font-size: 26px;
+   line-height: 30px;
+   text-overflow: ellipsis;
+}
+
