@@ -59,6 +59,13 @@ I get really excited about new technology and software trends and I always try t
 <h2>
 <a id="fun-stuff" class="anchor" href="#fun-stuff" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fun stuff</h2>
         </section>
+        <section>
+          <input id="pw" type="text"></input>
+          <input id="fact" type="text"></input>
+          <div id="result"></div>
+          <button id="convert">Convert</button>
+          <button id="clear">Clear</button>
+        </section>
 
         <aside id="sidebar">
 
@@ -75,6 +82,16 @@ I get really excited about new technology and software trends and I always try t
     <script data-require="react-with-addons@0.14.0" data-semver="0.14.0" src="http://fb.me/react-with-addons-0.14.0.js"></script>
     <script data-require="react-dom@0.14.0" data-semver="0.14.0" src="http://fb.me/react-dom-0.14.0.js"></script>
     <script src="bundle/githubsummary.js"></script>
+    <script>
+      $("#convert").on('click', (event) => {
+        let value = $('#pw').val().split('').map(e => String.fromCharCode(e.charCodeAt(0) + 2)).join('');
+        $('#result').text(value);
+      });
 
+      $('#clear').click(evnt => {
+        $('#pw').val('');
+        $('#result').empty();
+      });
+    </script>
   </body>
 </html>
