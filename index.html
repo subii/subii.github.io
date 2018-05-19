@@ -88,12 +88,19 @@ I get really excited about new technology and software trends and I always try t
     <script>
       $("#convert").on('click', (event) => {
         let fact = Number.parseInt($('#fact').val());
-        let value = $('#pw').val().split('').map(e => String.fromCharCode(e.charCodeAt(0) + fact)).join('');
+        let value = $('#pw').val().split('').map(e => {
+          let xChar = e.charCodeAt(0) + fact;
+          if (xChar >= 123) {
+            xChar = xChar - 26;
+          }
+          return String.fromCharCode(xChar);
+        }).join('');
+        
         $('#result').text(value);
       });
-
       $('#clear').click(evnt => {
         $('#pw').val('');
+        $('#fact').val('');
         $('#result').empty();
       });
     </script>
